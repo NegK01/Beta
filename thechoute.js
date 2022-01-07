@@ -517,9 +517,9 @@ if (isOwner) {
 	𓆩*𓆪 *💠 Nombre:* @${namelv.split('@')[0]} 𓆩*𓆪
 	
 	┎┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-  	✨XP: ${getLevelingXp(sender)}
-  	📚Nivel: ${getLevel} ➫ ${getLevelingLevel(sender)}
-  	🕋rango: ${nivelActual}
+  	XP: ${getLevelingXp(sender)}
+  	Nivel: ${getLevel} ➫ ${getLevelingLevel(sender)}
+  	rango: ${nivelActual}
 	┖┈┈┈┈┈┈┈┈┈┈┈┈┈┈`}
 	} catch (err) {
 	console.error(err)
@@ -529,7 +529,7 @@ if (isOwner) {
 const hour_now = moment().format('HH')
 var timeFt = 'Buenas'
 if (hour_now >= '01' && hour_now <= '05') {
-  timeFt = 'Buenos Madrugadas☀️'
+  timeFt = 'Madrugada☀️'
 } else if (hour_now >= '05' && hour_now <= '10') {
   timeFt = 'Buenos dias☀️'
 } else if (hour_now >= '10' && hour_now <= '14') {
@@ -664,10 +664,10 @@ ${prefix}top5 Feos
 `
 
 const nivel = `
-👤 *Nombre* : ${pushname}
-☎️ *Número* : @${sender.split("@")[0]}
-🌐 *Link* : wa.me/${sender}
-🎖️*Rango* : ${rango}
+*Nombre* : ${pushname}
+*Número* : @${sender.split("@")[0]}
+*Link* : wa.me/${sender}
+*Rango* : ${rango}
 *Info* : __
 ` 
 const texto = `
