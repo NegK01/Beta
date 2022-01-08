@@ -872,23 +872,24 @@ const install =
 
 Video completo donde se explican los pasos para la instalacion
 
-www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw
+https://www.youtube.com/watch?v=oFH71qWEC-4
 
 *PASOS DE INSTALACION*
 Instala los archivos necesarios
 
+- termux-setup-storage
 - pkg upgrade && update
-- pkg install nodejs
-- pkg install git
-- pkg install bash
+- pkg install nodejs -y
+- pkg install git -y
+- pkg install bash -y
 
 *Clona este repositorio*
 
-git clone https://github.com/NegK01/Beta25
+git clone https://github.com/NegK01/Beta1919
 
 *Inicia la instalacion*
 
-- cd Beta25
+- cd Beta1919
 - bash install.sh
 PARA INICIAR EL BOT
 
@@ -977,7 +978,7 @@ if (choute.message.buttonsResponseMessage){
     {"title": `Hola ${pushname} 👋🏻`, 
     "body": `MIRA EL VIDEO COMPLETO`, "mediaType": 2, 
     "thumbnail": fs.readFileSync(`media/imagen/youtube-min.jpg`), 
-    mediaUrl: "https://www.youtube.com/watch?v=fzV_QZODisQ"}}}) 
+    mediaUrl: "https://www.youtube.com/watch?v=oFH71qWEC-4"}}}) 
     addFilter(from)
       addLevelingLevel(sender, 5)	}}
     
