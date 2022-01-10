@@ -30,10 +30,10 @@ npm i @adiwajshing/baileys
 npm i performance-now
 npm i form-data
 npm i yt-search
-npm i google-it
+npm i google-it@1.6.1
 npm i g-i-s
-npm i hxz-api
-npm i cheerio
+npm i hxz-api@1.0.0
+npm i cheerio@1.0.0-rc.10
 npm i qrcode
 npm start
 
