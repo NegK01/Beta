@@ -760,10 +760,10 @@ const grupos =  `||- *_-GRUPOS-_*
 [🛡️] ${prefix}sider (+mensaje del bot)
 
 ||- *_-Lista de Usuarios Enlinea-_*
-[🛡️] ${prefix}listonine
+[🛡️] ${prefix}listonline
 [🛡️] ${prefix}listaenlinea
 [🛡️] ${prefix}enlinea
-[🛡️] ${prefix}onlie
+[🛡️] ${prefix}online
 `
 
 const multimedia = `๑۩۞۩๑ *_Multimedia_* ๑۩۞۩๑
