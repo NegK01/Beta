@@ -12,12 +12,12 @@ Instala los archivos necesarios
 
 Clona este repositorio
  ```bash
-> git clone https://github.com/NegK01/Beta23
+> git clone https://github.com/NegK01/Beta3040
 ```
 
 Inicia la instalacion
 ```bash
-- cd Beta23
+- cd Beta3040
 - bash install.sh
 ```
 Nota: Si la instalacion sera en Pc, utiliza
