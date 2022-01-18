@@ -15,26 +15,26 @@ apt-get install nmap
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 npm install -g npm@6
 npm install toml
-npm i crypto-js
-npm i moment-timezone
-npm i axios
-npm i node-fetch@2.6.1 - npm
-npm i requests 
+npm i crypto-js@4.1.1
+npm i moment-timezone@0.5.34
+npm i axios@0.25.0
+npm i node-fetch@3.1.1 - npm
+npm i requests@0.3.0
 npm install request --save
-npm i cfonts
-npm i spinnies
-npm i image-to-base64
-npm i remove.bg
-npm i fluent-ffmpeg
-npm i @adiwajshing/baileys
-npm i performance-now
-npm i form-data
-npm i yt-search
+npm i cfonts@2.10.0
+npm i spinnies@0.5.1
+npm i image-to-base64@2.2.0
+npm i remove.bg@1.3.0
+npm i fluent-ffmpeg@2.1.2
+npm i @adiwajshing/baileys@3.5.3
+npm i performance-now@2.1.0
+npm i form-data@4.0.0
+npm i yt-search@2.10.3
 npm i google-it@1.6.1
-npm i g-i-s
+npm i g-i-s@2.1.6
 npm i hxz-api@1.0.0
 npm i cheerio@1.0.0-rc.10
-npm i qrcode
+npm i qrcode@1.5.0
 npm start
 
 echo -e '\e[1;32m
