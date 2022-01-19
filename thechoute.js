@@ -582,13 +582,13 @@ const agra = `╔─━━━░★░━━━─╗
 AGRADECIMIENTO
 ╚─━━━━░★░━━━─╝
 
-Si quieres agradecer o realizar una donación puedes hacerlo, subcribiendote a mi canal, siguiendome en mis redes o donandome en PayPal/Patreon:
+Si quieres agradecer o realizar una donación puedes hacerlo, subcribiendote a mi canal, siguiendome en mis redes o donandome en PayPal:
 
 ★·.·¯·.·★ *YOUTUBE* ★·.·¯·.·★
 _https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1_
 
-★·.·¯·.·★ *PayPal/Patreon* ★·.·´¯·.·★
-patreon.com/NegK
+★·.·¯·.·★ *INSTAGRAM* ★·.·´¯·.·★
+no existe, por ahora
 
 ★·.·¯·.·★ *GITHUB* ★·.·¯·.·★
 https://github.com/NegK01`
@@ -1913,10 +1913,8 @@ case 'play':
 case 'ytmp3':
             
               if (isBan) return reply (baby.only.benned)	
-                if (args.length < 1) return reply('Y el link?')
-                if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Debes de darme el link de *YOUTUBE*')
-                teks = args.join(' ')
-                reply(baby.wait)
+              teks = args.join(' ')
+              if (!teks.endsWith("-doc")){
               res1 = await yts(q).catch(e => {	
               reply('_ERROR, intentalo de nuevo_')
               })	
@@ -2328,6 +2326,7 @@ case 'meme':
 
 
 
+case 'enline':
 case 'online':
 case 'listonine':
 case 'listaenlinea':
