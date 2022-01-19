@@ -582,13 +582,13 @@ const agra = `╔─━━━░★░━━━─╗
 AGRADECIMIENTO
 ╚─━━━━░★░━━━─╝
 
-Si quieres agradecer o realizar una donación puedes hacerlo, subcribiendote a mi canal, siguiendome en mis redes o donandome en PayPal:
+Si quieres agradecer o realizar una donación puedes hacerlo, subcribiendote a mi canal, siguiendome en mis redes o donandome en PayPal/Patreon:
 
 ★·.·¯·.·★ *YOUTUBE* ★·.·¯·.·★
 _https://www.youtube.com/channel/UCY0n_l69KbkULE_UU1kx0hw?sub_confirmation=1_
 
-★·.·¯·.·★ *INSTAGRAM* ★·.·´¯·.·★
-no existe, por ahora
+★·.·¯·.·★ *PayPal/Patreon* ★·.·´¯·.·★
+patreon.com/NegK
 
 ★·.·¯·.·★ *GITHUB* ★·.·¯·.·★
 https://github.com/NegK01`
@@ -2326,7 +2326,6 @@ case 'meme':
 
 
 
-case 'enline':
 case 'online':
 case 'listonine':
 case 'listaenlinea':
