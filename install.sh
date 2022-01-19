@@ -17,9 +17,9 @@ npm install -g npm@6
 npm install toml
 npm i crypto-js@4.1.1
 npm i moment-timezone@0.5.34
-npm i axios@0.25.0
-npm i node-fetch@3.1.1 - npm
-npm i requests@0.3.0
+npm i axios -y
+npm i node-fetch@2.6.1 - npm -y
+npm i requests
 npm install request --save
 npm i cfonts@2.10.0
 npm i spinnies@0.5.1
