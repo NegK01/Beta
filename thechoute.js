@@ -1913,6 +1913,8 @@ case 'play':
 case 'ytmp3':
             
               if (isBan) return reply (baby.only.benned)	
+              if (args.length < 1) return reply('Y el link?')
+              if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Debes de darme el link de *YOUTUBE*')	
               teks = args.join(' ')
               if (!teks.endsWith("-doc")){
               res1 = await yts(q).catch(e => {	
