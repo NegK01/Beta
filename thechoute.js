@@ -1911,24 +1911,26 @@ case 'agif':
 
 case 'play':
 case 'ytmp3':
-            
+              if (!isRegister) return reply(baby.only.usrReg)
               if (isBan) return reply (baby.only.benned)	
-              if (args.length < 1) return reply('Y el link?')
-              if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Debes de darme el link de *YOUTUBE*')	
+              reply(`Espere un momento, su audio ${q} se esta descargando...`)
               teks = args.join(' ')
               if (!teks.endsWith("-doc")){
               res1 = await yts(q).catch(e => {	
-              reply('_ERROR, intentalo de nuevo_')
+              reply('*NO HE ENCONTRADO LO QUE BUSCABAS*')
               })	
               let thumbInfo = ` [ *${res1.all[0].title}* ]
 *Subido* ${res1.all[0].ago}
+*Vistas :* ${res1.all[0].views}
+*Duracion :* ${res1.all[0].timestamp}
 *Canal :* ${res1.all[0].author.name}
-*El audio se esta enviando*
-_No hagas spam del comando_` 
+*°Link del Canal :* ${res1.all[0].author.url}
+*Elaudio se esta enviando*
+No hagas spam del comando_` 
               sendFileFromUrl(res1.all[0].image, image, {quoted: choute, caption: thumbInfo})
               res1 = await y2mateA(res1.all[0].url).catch(e => {
               pr21 = getJson(`https://api.zeks.xyz/api/ytmp3?apikey=hamilton20&url=${res1.all[0].url}`)	
-              reply(`Debes de darme el link de *YOUTUBE*`)
+              reply(`:D*`)
               sendFileFromUrl(pr21.result.url_audio, audio, {quoted: choute, mimetype: 'audio/mp4', filename: res1[0].output})
               //sendFileFromUrl(pr21.result.url_audio, audio, {quoted: choute, mimetype: 'audio/mp4', ptt: true, filename: res1[0].output})
               })
@@ -1937,17 +1939,18 @@ _No hagas spam del comando_`
               }
               addFilter(from)
               addLevelingLevel(sender, 5)	
-              break	
+              break
 
 case 'ytmp4':
                
+                if (!isRegister) return reply(baby.only.usrReg)
                 if (isBan) return reply (baby.only.benned)	
                 if (args.length < 1) return reply('Y el link?')
-                if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Debes de darme el link de *YOUTUBE*')
+                if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Eu debes de darme el link de *YOUTUBE*')
                 teks = args.join(' ')
                 reply(baby.wait)
                 resyv = await y2mateV(teks).catch(e => {
-                reply('_ERROR, intentalo de nuevo_')
+                reply('_ERROR :D, intentalo _')
                 })
                 result = `「  ${yo} 」
 *°Titulo :* ${resyv[0].judul}
