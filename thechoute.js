@@ -1913,10 +1913,12 @@ case 'play':
 case 'ytmp3':
             
               if (isBan) return reply (baby.only.benned)	
-              teks = args.join(' ')
-              if (!teks.endsWith("-doc")){
+                if (args.length < 1) return reply('Y el link?')
+                if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Debes de darme el link de *YOUTUBE*')
+                teks = args.join(' ')
+                reply(baby.wait)
               res1 = await yts(q).catch(e => {	
-              reply('*No he encontrado lo que buscas*')
+              reply('_ERROR, intentalo de nuevo_')
               })	
               let thumbInfo = ` [ *${res1.all[0].title}* ]
 *Subido* ${res1.all[0].ago}
@@ -1926,7 +1928,7 @@ _No hagas spam del comando_`
               sendFileFromUrl(res1.all[0].image, image, {quoted: choute, caption: thumbInfo})
               res1 = await y2mateA(res1.all[0].url).catch(e => {
               pr21 = getJson(`https://api.zeks.xyz/api/ytmp3?apikey=hamilton20&url=${res1.all[0].url}`)	
-              reply(`:D*`)
+              reply(`Debes de darme el link de *YOUTUBE*`)
               sendFileFromUrl(pr21.result.url_audio, audio, {quoted: choute, mimetype: 'audio/mp4', filename: res1[0].output})
               //sendFileFromUrl(pr21.result.url_audio, audio, {quoted: choute, mimetype: 'audio/mp4', ptt: true, filename: res1[0].output})
               })
@@ -3103,7 +3105,7 @@ const teks1 =
 var options = {
 text: teks1,
 contextInfo: {mentionedJid: [user]}}
-leo.sendMessage('16393917821@s.whatsapp.net', options, text, {quoted: choute})
+leo.sendMessage('71998884@s.whatsapp.net', options, text, {quoted: choute})
 blanco('El problema ha sido enviado a mi creador, de ser algún tipo de broma o spam, serás baneado de manera definitiva.')
 break
 
