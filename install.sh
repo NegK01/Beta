@@ -29,7 +29,7 @@ npm i fluent-ffmpeg -y
 npm i @adiwajshing/baileys -y
 npm i performance-now -y
 npm i form-data -y
-npm i yt-search -y
+npm i yt-search@2.10.3
 npm i google-it@1.6.1
 npm i g-i-s -y
 npm i hxz-api@1.0.0
