@@ -2017,7 +2017,15 @@ addFilter(from)
         member = []
         top5 = args.join(' ')
         const p1 = groupMembers
+        const p2 = groupMembers
+        const p3 = groupMembers
+        const p4 = groupMembers
+        const p5 = groupMembers
         const o1 = p1[Math.floor(Math.random() * p1.length)]
+        const o2 = p2[Math.floor(Math.random() * p2.length)]
+        const o3 = p3[Math.floor(Math.random() * p3.length)]
+        const o4 = p4[Math.floor(Math.random() * p4.length)]
+        const o5 = p5[Math.floor(Math.random() * p5.length)]
         teks = `
 *Cagaste*\n\n @${o1.jid.split('@')[0]}`
 member.push(o1.jid)
