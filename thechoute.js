@@ -275,8 +275,8 @@ const command = comm
   const q = args.join(' ')
   const soyYo = leo.user.jid
   const botNumber = leo.user.jid.split("@")[0]
-  const ownerNumber = "16393917821@s.whatsapp.net"
-  const Oowner  = "16393917821@s.whatsapp.net"
+  const ownerNumber = "50671998884@s.whatsapp.net"
+  const Oowner  = "50671998884@s.whatsapp.net"
   const the34 = "50063948@s.whatsapp.net"
   const isGroup = from.endsWith('@g.us')
   const sender = choute.key.fromMe ? leo.user.jid : isGroup ? choute.participant : choute.key.remoteJid
@@ -661,6 +661,9 @@ ${prefix}top5 Feos
 ||- *_-El bot te cuenta un chiste-_*
 [⚜️] ${prefix}chiste
 
+||- *_-Ruleta rusa-_*
+[⚜️] ${prefix}ruleta
+
 `
 
 const nivel = `
@@ -773,17 +776,6 @@ const multimedia = `๑۩۞۩๑ *_Multimedia_* ๑۩۞۩๑
 [📟]${prefix}imagen (+ imagen)
 [📟]${prefix}wp
 
-
-||- *_-Busqueda de Google-_*
-
-[🍬] ${prefix}google (+ palabra)
-
-
-||- *_-Descargar Videos-_*
-
-[📹] ${prefix}ytmp4 (+link)
-
-
 ||- *_-Efectos Para Videos-_*
 [📹] ${prefix}sinsonido
 [📹] ${prefix}vefecto
@@ -791,11 +783,6 @@ const multimedia = `๑۩۞۩๑ *_Multimedia_* ๑۩۞۩๑
 [📹] ${prefix}vlento
 [📹] ${prefix}vrapido
 [📹] ${prefix}reversa 
-
-||- *_-Descargar Musica-_*
-
-[🎧] ${prefix}ytmp3
-[🎧] ${prefix}play
 
 ||- *_-Efectos Para Audio-_*
 [🎙️] ${prefix}bass
@@ -1830,26 +1817,6 @@ case 'sticker':
                   } else { reply(`Envíe una imagen junto al comando ${prefix} o etiqueta una imagen que haya sido enviada \nLa duración de un video debe ser 1 a 9 segundos. (Stickers Animados BETA, puede no funcionar)`)}
                   break
 
-case 'scarcel':
-addFilter(from)	
-if (((isMedia && !choute.message.videoMessage) || isQuotedImage) && args.length == 0) {
-rej = isQuotedImage ? JSON.parse(JSON.stringify(choute).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : choute;
-reply(baby.wait,{contextInfo: {"forwardingScore": 999, "isForwarded": true}, sendEphemeral: true})
-owgir = await leo.downloadMediaMessage(rej)
-await fs.writeFileSync(`./stickc.jpeg`, owgir)
-var imgbb2c = require('imgbb-uploader')
-anuc = await imgbb2c("20a14861e4f7591f3dc52649cb07ae02", './stickc.jpeg')
-txtc = `${anuc.display_url}`
-sc = await getBuffer(`https://pecundang.herokuapp.com/api/jail?url=${txtc}`)
-const bas642c = `data:image/jpeg;base64,${sc.toString('base64')}`
-var mantap2c = await convertSticker(bas642c, `Empresa Maurisios`)
-var imageBuffer2c = new Buffer.from(mantap2c, 'base64');
-leo.sendMessage(from, imageBuffer2c, sticker, {quoted: choute, sendEphemeral: true})
-fs.unlinkSync('./stickc.jpeg')
-} else {
-reply('Se nesecita una imagen para hacer su sticker!');
-}
-break
 
 case 'autostick':            
 if (!isGroup) return reply(baby.only.group)
@@ -1896,84 +1863,7 @@ case 'aimg':
                           }
                           break
 
-case 'agif':
-                            agif = isQuotedSticker ? JSON.parse(JSON.stringify(choute).replace('quotedM','m')).message.extendedTextMessage.contextInfo : choute
-                            reply('*Espera un momento...*')
-                            owgig = await leo.downloadAndSaveMediaMessage(agif)
-                            var rang = getRandom('.gif')
-                            exec(`ffmpeg -i ${owgig} ${rang}`, (err) => {
-                            fs.unlinkSync(owgig)
-                            if (err) return reply('error')
-                            toptg = fs.readFileSync(rang)
-                            leo.sendMessage(from, toptg, MessageType.gif, {mimetype: 'video/gif', quoted: faud})
-                            })
-                            break
 
-case 'play':
-case 'ytmp3':
-              if (!isRegister) return reply(baby.only.usrReg)
-              if (isBan) return reply (baby.only.benned)	
-              teks = args.join(' ')
-              if (!teks.endsWith("-doc")){
-              res1 = await yts(q).catch(e => {	
-              reply('*NO HE ENCONTRADO LO QUE BUSCABAS*')
-              })	
-              let thumbInfo = ` [ *${res1.all[0].title}* ]
-*Subido* ${res1.all[0].ago}
-*Duracion :* ${res1.all[0].timestamp}
-*Canal :* ${res1.all[0].author.name}
-*El audio se esta enviando*
-No hagas spam del comando_` 
-              sendFileFromUrl(res1.all[0].image, image, {quoted: choute, caption: thumbInfo})
-              res1 = await y2mateA(res1.all[0].url).catch(e => {
-              pr21 = getJson(`https://api.zeks.xyz/api/ytmp3?apikey=hamilton20&url=${res1.all[0].url}`)	
-              reply(`:D*`)
-              sendFileFromUrl(pr21.result.url_audio, audio, {quoted: choute, mimetype: 'audio/mp4', filename: res1[0].output})
-              //sendFileFromUrl(pr21.result.url_audio, audio, {quoted: choute, mimetype: 'audio/mp4', ptt: true, filename: res1[0].output})
-              })
-              sendFileFromUrl(res1[0].link, audio, {quoted: choute, mimetype: 'audio/mp4', filename: res1[0].output})
-             // sendFileFromUrl(res1[0].link, audio, {quoted: choute, mimetype: 'audio/mp4', ptt: true, filename: res1[0].output})
-              }
-              addFilter(from)
-              addLevelingLevel(sender, 5)	
-              break
-
-case 'ytmp4':
-               
-                if (!isRegister) return reply(baby.only.usrReg)
-                if (isBan) return reply (baby.only.benned)	
-                if (args.length < 1) return reply('Y el link?')
-                if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Debes de darme el link de *YOUTUBE*')
-                teks = args.join(' ')
-                reply(baby.wait)
-                resyv = await y2mateV(teks).catch(e => {
-                reply('_ERROR_')
-                })
-                result = `「  ${yo} 」
-*°Titulo :* ${resyv[0].judul}
-*°Tamaño :* ${resyv[0].size}
-*°Calidad :* ${resyv[0].quality}p
-*°Nombre :* ${resyv[0].output}
-*°Output :* ${resyv[0].tipe}
-_*El archivo se esta enviando.*_
-                `
-                sendFileFromUrl(resyv[0].thumb, image, {caption: result, quoted: choute})
-                sendFileFromUrl(resyv[0].link, video, {quoted: choute, mimetype:'video/mp4', duration: 9999999999})
-                addFilter(from)
-                addLevelingLevel(sender, 5)		
-                break
-
-case 'facebook':
-case 'fb':
-if (!isUrl) return reply('Y el Link?')
-if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply('Es obligatorio el link de facebook')
-reply(baby.wait)
-hx.fbdown(q)
-.then(result => {
-reply(result)
-sendMediaURL(from,result,`*Link Del Video*`)
-})
-break
 
 case 'listadmins':
 case 'listadmin':
@@ -2012,16 +1902,6 @@ case 'chiste':
             if (isBan) return reply (baby.only.benned)	
           
             respuesta = [`*Buenos días, me gustaría alquilar "Batman Forever".*\n No es posible, tiene que devolverla tomorrow.`, `*¿Qué le dijo un zapato a otro?* \n Qué vida más arrastrada llevas.`, `¿Qué le dice un techo a otro? \n Techo de menos.`, `*¿Qué le dijo batman al papel higiénico?* \n Tu eres el único que conoce mi baticueva.`, `— Buenos días, quería una camiseta de un personaje inspirador. \n — ¿Ghandi? \n — No, mediani.`, `*¿Qué le dice un árbol a otro?* \n ¡Qué pasa tronco!`, `*¿Qué hace un mudo bailando?* \n Una mudanza.`, `¿Qué le dice una iguana a su hermana gemela? \n Somos iguanitas`, `*Doctor, soy asmático, ¿es grave?* \n No amigo, es esdrújula.`, `*¿Qué le dice la foca a su madre?* \n I love you, mother foca.`, `*¿Sabes que le dice un .gif a un .jpg?* \n ¡Anímate hombre!`, `Ayer me caí y pensé que me había roto el peroné… \n ¡Peronó!` ]
-            answer = respuesta[Math.floor(Math.random() * respuesta.length)]
-            reply(answer)
-            addFilter(from)
-            break
-
-case 'doxxeo':
-            if (isBan) return reply (baby.only.benned)	
-         
-            reply(`.play Oruga del Doxeo Plantilla meme| HD|`)
-            respuesta = [`IP: 92.28.211.234 \nN: 43.7462 \nW:12.4893 \nSS Number: 6979191519182010 \nIPv6: fe80::5dcd::ef69::fb22::d9888 \nUPNP: Enabled \nDMZ: 10.112.42.15 \nMAC 5A:783E:7E:D0 \nISP: Ucom Unversal \nDNS: 8.8.8.8 \nALT DNS: 1.1.1.8.1 \nDNS SUFFIX: Dlink \nWAN TYPE: Private Nat \nGATEWAY: 192.168.0.1 \nSUBNET MASK: 225.225.0.251 \nUDP OPEN PORTS: 8080.80` ]
             answer = respuesta[Math.floor(Math.random() * respuesta.length)]
             reply(answer)
             addFilter(from)
@@ -2068,26 +1948,10 @@ case 'vor':
             prep = leo.prepareMessageFromContent(from, { buttonsMessage }, { quoted: choute })
             leo.relayWAMessage(prep)              
             break
-
-case 'info':
-case 'estado':
-case 'ping':		 
-case 'infobot':		  
-          
-            leo.sendMessage(from, fs.readFileSync('./media/imagen/infobot.jpg') , MessageType.image, {quoted: choute, caption: `${infobot}`},{contextInfo: {mentionedJid: [mentionUser]}})
-            break
             
 case 'reglas':
           
             leo.sendMessage(from, fs.readFileSync('./media/imagen/imgregla.jpg') , MessageType.image, {quoted: choute, caption: `${reglas}`})
-            break
-
-case 'level':
-case 'nivel':
-         
-            if (isBan) return reply (baby.only.benned)	
-            const lvup =  `${nivel}` 
-            leo.sendMessage(from, lvup, MessageType.text, {quoted: choute} )
             break
 
 
@@ -2145,6 +2009,22 @@ member.push(o5.jid)
 mentions(teks, member, true)
 break
 
+case 'ruleta':
+
+if (isBan) return reply (baby.only.benned)	
+addFilter(from)
+        if (!isGroup) return reply('Ruleta en un chat? Te gusta la pija cierto. Este comando es solo para grupos.')
+        member = []
+        top5 = args.join(' ')
+        const p1 = groupMembers
+        const o1 = p1[Math.floor(Math.random() * p1.length)]
+        teks = `
+*Cagaste*\n\n @${o1.jid.split('@')[0]}`
+member.push(o1.jid)
+mentions( member, true)
+break
+
+
 case 'pregunta':
                 
                   if (isBan) return reply (baby.only.benned)	
@@ -2185,25 +2065,6 @@ case 'quemusicaes':
               p = musica.result              
               break       
 
-case 'google':
- 
-  if (isBan) return reply (baby.only.benned)	
-              let buscar = args.join(' ')
-              if (!buscar) return reply('Que deseas buscar?')
-              let search = await LeoGg({ query: buscar })
-              let ggsm = ``
-              for (let i of search) {
-              ggsm += `
-*Titulo :* ${i.title}
-*Link :* ${i.link}
-*Contenido :* ${i.snippet}
-`
-              }
-              var babygg = ggsm.trim()
-              reply(`*Busqueda realizada por* ${yo} \n\n${babygg}`)
-              addFilter(from)
-              break     
-
 
 //𝙄𝙈𝘼𝙂𝙀𝙉
 case 'imagen':
@@ -2241,80 +2102,7 @@ case 'wp':
               addFilter(from)
               break  
 
-
-case 'tts':
-case 'voz':
-                if (args.length < 1) return leo.sendMessage(from, 'Y el codigo de idioma? escribe el comando *idiomas* para ver la lista', text, { quoted: choute })
-                const gtts = require('./lib/gtts')(args[0])
-                if (args.length < 2) return leo.sendMessage(from, 'Escribe el texto', text, {quoted: choute})
-                dtt = body.slice(8)
-                ranm = getRandom('.mp3')
-                rano = getRandom('.ogg')
-                dtt.length > 300
-                ? reply('Si no sabes usar esto... mejor evitalo')
-                : gtts.save(ranm, dtt, function() {
-                leo.updatePresence(from, Presence.recording)
-                leo.sendMessage(from, fs.readFileSync(ranm), audio, {quoted: choute, mimetype: 'audio/mp4', duration: -999999999999999999, ptt:true, sendEphemeral: true, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
-                fs.unlinkSync(ranm)
-                })
-                addFilter(from)
-                break
-
-case 'idiomas':
-                  reply(`*Estos son los idiomas disponibles*:
-                  
-                    'af': 'Afrikaans',
-                    'sq': 'Albanian',
-                    'ar': 'Arabic',
-                    'hy': 'Armenian',
-                    'ca': 'Catalan',
-                    'zh': 'Chinese',
-                    'zh-cn': 'Chinese (Mandarin/China)',
-                    'zh-tw': 'Chinese (Mandarin/Taiwan)',
-                    'zh-yue': 'Chinese (Cantonese)',
-                    'hr': 'Croatian',
-                    'cs': 'Czech',
-                    'da': 'Danish',
-                    'nl': 'Dutch',
-                    'en': 'English',
-                    'en-au': 'English (Australia)',
-                    'en-uk': 'English (United Kingdom)',
-                    'en-us': 'English (United States)',
-                    'eo': 'Esperanto',
-                    'fi': 'Finnish',
-                    'fr': 'French',
-                    'de': 'German',
-                    'el': 'Greek',
-                    'ht': 'Haitian Creole',
-                    'hi': 'Hindi',
-                    'hu': 'Hungarian',
-                    'is': 'Icelandic',
-                    'id': 'Indonesian',
-                    'it': 'Italian',
-                    'ja': 'Japanese',
-                    'ko': 'Korean',
-                    'la': 'Latin',
-                    'lv': 'Latvian',
-                    'mk': 'Macedonian',
-                    'no': 'Norwegian',
-                    'pl': 'Polish',
-                    'pt': 'Portuguese',
-                    'pt-br': 'Portuguese (Brazil)',
-                    'ro': 'Romanian',
-                    'ru': 'Russian',
-                    'sr': 'Serbian',
-                    'sk': 'Slovak',
-                    'es': 'Spanish',
-                    'es-es': 'Spanish (Spain)',
-                    'es-us': 'Spanish (United States)',
-                    'sw': 'Swahili',
-                    'sv': 'Swedish',
-                    'ta': 'Tamil',
-                    'th': 'Thai',
-                    'tr': 'Turkish',
-                    'vi': 'Vietnamese',
-                    'cy': 'Welsh'`)
-                  break    
+ 
 
 case 'meme':
                 leo.updatePresence(from, Presence.composing)
@@ -3105,32 +2893,10 @@ const teks1 =
 var options = {
 text: teks1,
 contextInfo: {mentionedJid: [user]}}
-leo.sendMessage('71998884@s.whatsapp.net', options, text, {quoted: choute})
+leo.sendMessage('50671998884@s.whatsapp.net', options, text, {quoted: choute})
 blanco('El problema ha sido enviado a mi creador, de ser algún tipo de broma o spam, serás baneado de manera definitiva.')
 break
 
-case 'bua':
-if (!isOwner)
-if (args.length < 1) return reply(`Goy`)
-if ((args[0]) === 'on') {
-if (isWelkom) return reply('Ya esta activo')
-welkom.push(from)
-fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-reply(`Listo, se activo el modo sexo`)
-} else if ((args[0]) === 'off')
-break
-
-case 'bue':                
-if (!isOwner)
-if (!isWelkom) return reply('falta la de bua')
-if (args.length < 1) return reply('Thuy')          
-if (args[0] === 'on') {                                    
-if (isAntiFake) return reply('*Ya esta activo*')          
-antifake.push(from)                          
-fs.writeFileSync('./src/antifake.json', JSON.stringify(antifake))      
-reply(`Se acredito exitosamente`)  
-} else if (args[0] === 'off')   
-break 
 
   case 'clonar':
 if (!isGroup) return reply(baby.only.group)
