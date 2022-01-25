@@ -2029,6 +2029,10 @@ addFilter(from)
         teks = `
 *Cagaste*\n\n @${o1.jid.split('@')[0]}`
 member.push(o1.jid)
+member.push(o2.jid)
+member.push(o3.jid)
+member.push(o4.jid)
+member.push(o5.jid)
 mentions( member, true)
 break
 
