@@ -2033,7 +2033,7 @@ member.push(o22.jid)
 member.push(o33.jid)
 member.push(o44.jid)
 member.push(o55.jid)
-mentions( member, true)
+mentions(teks, member, true)
 break
 
 
