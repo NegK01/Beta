@@ -1718,12 +1718,12 @@ case 'xd':
             leo.updatePresence(from, Presence.composing)
             members_id = []
             teks = (args.length > 1) ? body.slice(8).trim(): ''
-            teks += ` *𝐓𝐨𝐭𝐚𝐥* : ${groupMembers.length}\n`
+            teks += ` *Total* : ${groupMembers.length}\n`
             for (let mem of groupMembers) {
             teks += `╠ @${mem.jid.split('@')[0]}\n`
             members_id.push(mem.jid)
             }
-            mentions('*𝐌𝐈𝐄𝐌𝐁𝐑𝐎𝐒  𝐃𝐄𝐋  𝐆𝐑𝐔𝐏𝐎*\n╔════ *_Neg Bot_*\n╠ ● '+teks+'╠═══════ *_Neg_* ═════\n╚══════', members_id, true)
+            mentions('*MIEMBROS DEL GRUPO*\n╔════ *_Neg Bot_*\n╠ ● '+teks+'╠═══════ *_Neg_* ═════\n╚══════', members_id, true)
             addFilter(from)
             break
 
@@ -2016,23 +2016,23 @@ addFilter(from)
         if (!isGroup) return reply('Ruleta en un chat? Te gusta la pija cierto. Este comando es solo para grupos.')
         member = []
         top5 = args.join(' ')
-        const p1 = groupMembers
-        const p2 = groupMembers
-        const p3 = groupMembers
-        const p4 = groupMembers
-        const p5 = groupMembers
-        const o1 = p1[Math.floor(Math.random() * p1.length)]
-        const o2 = p2[Math.floor(Math.random() * p2.length)]
-        const o3 = p3[Math.floor(Math.random() * p3.length)]
-        const o4 = p4[Math.floor(Math.random() * p4.length)]
-        const o5 = p5[Math.floor(Math.random() * p5.length)]
+        const p11 = groupMembers
+        const p22 = groupMembers
+        const p33 = groupMembers
+        const p44 = groupMembers
+        const p55 = groupMembers
+        const o11 = p11[Math.floor(Math.random() * p11.length)]
+        const o22 = p22[Math.floor(Math.random() * p22.length)]
+        const o33 = p33[Math.floor(Math.random() * p33.length)]
+        const o44 = p44[Math.floor(Math.random() * p44.length)]
+        const o55 = p55[Math.floor(Math.random() * p55.length)]
         teks = `
 *Cagaste*\n\n @${o1.jid.split('@')[0]}`
-member.push(o1.jid)
-member.push(o2.jid)
-member.push(o3.jid)
-member.push(o4.jid)
-member.push(o5.jid)
+member.push(o11.jid)
+member.push(o22.jid)
+member.push(o33.jid)
+member.push(o44.jid)
+member.push(o55.jid)
 mentions( member, true)
 break
 
