@@ -138,7 +138,7 @@ try {pushnem = choute.key.fromMe ? leo.user.name : conts.notify || conts.vname |
     try {
     ppimg = await leo.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)} 
     catch {
-    ppimg = 'https://i.ibb.co/gDJ29Jt/Baby-Foto-Perfil.jpg'}  
+    ppimg = 'https://i.ibb.co/Tb3JY7s/pfp-neg.png'}  
     
      teks = 
 `Hola, @${num.split('@')[0]}
@@ -192,7 +192,7 @@ Recuerda siempre seguir las reglas y mantener una formalidad respetuosa.`
     try {
     ppimg = await leo.getProfilePicture(`${num.split('@')[0]}@c.us`)
     } catch {
-    ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+    ppimg = 'https://i.ibb.co/Tb3JY7s/pfp-neg.png'
     }
     thu = await leo.getStatus(anu.participants[0], MessageType.text)
     teks = 
@@ -2009,6 +2009,34 @@ member.push(o5.jid)
 mentions(teks, member, true)
 break
 
+case 'top3':
+
+            
+              if (isBan) return reply (baby.only.benned)	
+  addFilter(from)
+          if (!isGroup) return reply('Top3 en un chat? Te gusta la pija cierto. Este comando es solo para grupos.')
+          member = []
+          top3 = args.join(' ')
+          const p111 = groupMembers
+          const p222 = groupMembers
+          const p333 = groupMembers
+          const p444 = groupMembers
+          const p555 = groupMembers
+          const o111 = p111[Math.floor(Math.random() * p111.length)]
+          const o222 = p222[Math.floor(Math.random() * p222.length)]
+          const o333 = p333[Math.floor(Math.random() * p333.length)]
+          const o444 = p444[Math.floor(Math.random() * p444.length)]
+          const o555 = p555[Math.floor(Math.random() * p555.length)]
+          teks = `
+*Atencion estos son los 3*\n\n *Primer puesto para* @${o1.jid.split('@')[0]}\n\n*Segundo puesto para*@${o2.jid.split('@')[0]}\n\n*Tercer puesto para*@${o3.jid.split('@')[0]}\n\n\n_Top 3 de_ *${top3}* en este grupo`
+member.push(o111.jid)
+member.push(o222.jid)
+member.push(o333.jid)
+member.push(o444.jid)
+member.push(o555.jid)
+mentions(teks, member, true)
+break
+
 case 'ruleta':
 
 if (isBan) return reply (baby.only.benned)	
@@ -2027,7 +2055,7 @@ addFilter(from)
         const o44 = p44[Math.floor(Math.random() * p44.length)]
         const o55 = p55[Math.floor(Math.random() * p55.length)]
         teks = `
-*Cagaste*\n\n@${o11.jid.split('@')[0]}`
+*Cagaste*\n\n@${o11.jid.split('@')[1]}`
 member.push(o11.jid)
 member.push(o22.jid)
 member.push(o33.jid)
