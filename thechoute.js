@@ -1702,14 +1702,14 @@ case 'hidetag':
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
-            await wa.hideTag(from, args.join(" "))
+            await wa.hide(from, args.join(" "))
             break
 
 case 'Cagaste':
               if (isBan) return reply (baby.only.benned)	
               if (!isGroup) return reply(baby.only.group)
               if (!isAdmin) return reply(baby.only.admin)
-              await wa.hideTag(from, args.join(" "))
+              await wa.hide(from, args.join(" "))
               break
 
 case 'miembros':
