@@ -2027,13 +2027,13 @@ addFilter(from)
         const o44 = p44[Math.floor(Math.random() * p44.length)]
         const o55 = p55[Math.floor(Math.random() * p55.length)]
         teks = `
-*Cagaste*\n\n @${o11.jid.split('@')[0]}`
+*Cagaste*\n\n@${o11.jid.split('@')[0]}`
 member.push(o11.jid)
 member.push(o22.jid)
 member.push(o33.jid)
 member.push(o44.jid)
 member.push(o55.jid)
-mentions( member, true)
+mentions(teks, member, true)
 break
 
 
