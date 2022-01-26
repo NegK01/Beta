@@ -658,11 +658,15 @@ const entrete = `๑۩۞۩๑ *_Juegos/Entretenimiento_* ๑۩۞۩๑
 Ejemplo:
 ${prefix}top5 Feos
 
+[⚜️] ${prefix}top3 (Texto)
+Ejemplo:
+${prefix}top3 Feos
+
 ||- *_-El bot te cuenta un chiste-_*
 [⚜️] ${prefix}chiste
 
-||- *_-Ruleta rusa-_*
-[⚜️] ${prefix}ruleta
+||- *_-Miembro al azar-_*
+[⚜️] ${prefix}azar
 
 `
 
@@ -1702,15 +1706,8 @@ case 'hidetag':
             if (isBan) return reply (baby.only.benned)	
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
-            await wa.hide(from, args.join(" "))
+            await wa.hideTag(from, args.join(" "))
             break
-
-case 'Cagaste':
-              if (isBan) return reply (baby.only.benned)	
-              if (!isGroup) return reply(baby.only.group)
-              if (!isAdmin) return reply(baby.only.admin)
-              await wa.hide(from, args.join(" "))
-              break
 
 case 'miembros':
 case 'todos':
@@ -2044,13 +2041,13 @@ member.push(o555.jid)
 mentions(teks, member, true)
 break
 
-case 'ruleta':
+case 'azar':
 
 if (isBan) return reply (baby.only.benned)	
 addFilter(from)
-        if (!isGroup) return reply('Ruleta en un chat? Te gusta la pija cierto. Este comando es solo para grupos.')
+        if (!isGroup) return reply('Azar en un chat? Te gusta la pija cierto. Este comando es solo para grupos.')
         member = []
-        ruleta = args.join(' ')
+        azar = args.join(' ')
         const p11 = groupMembers
         const p22 = groupMembers
         const p33 = groupMembers
@@ -2061,8 +2058,7 @@ addFilter(from)
         const o33 = p33[Math.floor(Math.random() * p33.length)]
         const o44 = p44[Math.floor(Math.random() * p44.length)]
         const o55 = p55[Math.floor(Math.random() * p55.length)]
-        teks = `
-.Cagaste .kick @${o11.jid.split('@')[0]}`
+        teks = `@${o11.jid.split('@')[0]}`
 member.push(o11.jid)
 member.push(o22.jid)
 member.push(o33.jid)
