@@ -2015,7 +2015,7 @@ if (isBan) return reply (baby.only.benned)
 addFilter(from)
         if (!isGroup) return reply('Ruleta en un chat? Te gusta la pija cierto. Este comando es solo para grupos.')
         member = []
-        top5 = args.join(' ')
+        ruleta = args.join(' ')
         const p11 = groupMembers
         const p22 = groupMembers
         const p33 = groupMembers
@@ -2027,7 +2027,7 @@ addFilter(from)
         const o44 = p44[Math.floor(Math.random() * p44.length)]
         const o55 = p55[Math.floor(Math.random() * p55.length)]
         teks = `
-*Cagaste*\n\n @${o1.jid.split('@')[0]}`
+*Cagaste*\n\n @${o11.jid.split('@')[0]}`
 member.push(o11.jid)
 member.push(o22.jid)
 member.push(o33.jid)
