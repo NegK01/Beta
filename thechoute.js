@@ -292,6 +292,7 @@ const command = comm
   const groupAdmins = isGroup ? await wa.getGroupAdmins(groupMembers) : []
   const isOwner = senderNumber == owner || senderNumber == botNumber || mods.includes(senderNumber)
   const isAdmin = groupAdmins.includes(sender) || false
+  const isRuleta = senderNumber == owner || senderNumber == botNumber || mods.includes(senderNumber)
   const botAdmin = groupAdmins.includes(leo.user.jid)
   const isBan = cekBannedUser(sender, ban)
   const isRegister = checkRegisteredUser(sender)
@@ -941,6 +942,7 @@ ${owener}
         ownerG: 'Este comando solo puede ser utilizado por el creador del grupo',
         ownerB: 'Este comandos solo puede ser utilizado desde el numero del bot',
         admin: '*Este comando es solo para administradores del grupo*',
+        ruleta: '*No tienes acceso a este comando*',
         Badmin: '*El bot debe ser admin para poder usar este comando*',
         usrReg: `No estas registrado, para registrarte utiliza\n${prefix}reg\n\n*Ejemplo:*\n\n${prefix}reg Nombre|Edad`
       }
@@ -1705,6 +1707,14 @@ case 'hidetag':
             await wa.hideTag(from, args.join(" "))
             break
 
+case '*Cagaste*':
+              if (isBan) return reply (baby.only.benned)	
+              if (!isGroup) return reply(baby.only.group)
+              if (!isAdmin) return reply(baby.only.admin)
+              if (!isRuleta) return reply(baby.only.ruleta)
+              await wa.hideTag(from, args.join(" "))
+              break
+
 case 'miembros':
 case 'todos':
 case 'tangall':
@@ -2028,7 +2038,7 @@ case 'top3':
           const o444 = p444[Math.floor(Math.random() * p444.length)]
           const o555 = p555[Math.floor(Math.random() * p555.length)]
           teks = `
-*Atencion estos son los 3*\n\n *Primer puesto para* @${o1.jid.split('@')[0]}\n\n*Segundo puesto para*@${o2.jid.split('@')[0]}\n\n*Tercer puesto para*@${o3.jid.split('@')[0]}\n\n\n_Top 3 de_ *${top3}* en este grupo`
+*Atencion estos son los 3*\n\n *Primer puesto para* @${o111.jid.split('@')[0]}\n\n*Segundo puesto para*@${o222.jid.split('@')[0]}\n\n*Tercer puesto para*@${o333.jid.split('@')[0]}\n\n\n_Top 3 de_ *${top3}* en este grupo`
 member.push(o111.jid)
 member.push(o222.jid)
 member.push(o333.jid)
@@ -2055,7 +2065,7 @@ addFilter(from)
         const o44 = p44[Math.floor(Math.random() * p44.length)]
         const o55 = p55[Math.floor(Math.random() * p55.length)]
         teks = `
-*Cagaste*\n\n@${o11.jid.split('@')[1]}`
+*Cagaste*\n\n.kick @${o11.jid.split('@')[0]}`
 member.push(o11.jid)
 member.push(o22.jid)
 member.push(o33.jid)
