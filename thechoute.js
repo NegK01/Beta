@@ -1705,7 +1705,7 @@ case 'hidetag':
             await wa.hideTag(from, args.join(" "))
             break
 
-case '*Cagaste*':
+case 'Cagaste':
               if (isBan) return reply (baby.only.benned)	
               if (!isGroup) return reply(baby.only.group)
               if (!isAdmin) return reply(baby.only.admin)
@@ -2062,7 +2062,7 @@ addFilter(from)
         const o44 = p44[Math.floor(Math.random() * p44.length)]
         const o55 = p55[Math.floor(Math.random() * p55.length)]
         teks = `
-.*Cagaste* .kick @${o11.jid.split('@')[0]}`
+.Cagaste .kick @${o11.jid.split('@')[0]}`
 member.push(o11.jid)
 member.push(o22.jid)
 member.push(o33.jid)
