@@ -1602,6 +1602,7 @@ case 'eliminar':
             if (!isGroup) return reply(baby.only.group)
             if (!isAdmin) return reply(baby.only.admin)
             if (!botAdmin) return reply(baby.only.Badmin)
+            if (!isOwner) return reply(baby.only.ownerB)
             if (!mentionUser.length == 1) return reply('Eliqueta un mensaje de aquien debo eliminar o mencionalo')
             leo.groupRemove(from, mentionUser) 
             reply ('Al toque')
