@@ -26,11 +26,11 @@ npm i spinnies
 npm i image-to-base64 -y
 npm i remove.bg -y
 npm i fluent-ffmpeg -y
-npm i @adiwajshing/baileys -y
+npm i @adiwajshing/baileys@4.0.0 -y
 npm i @adiwajshing/keyed-db@0.2.4 -y
 npm i jimp@0.16.1 -y
 npm i qrcode-terminal@0.12.0 -y
-npm i sharp@0.29.3 -y
+npm i sharp -y
 npm i performance-now -y
 npm i form-data -y
 npm i yt-search -y
