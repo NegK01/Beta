@@ -26,7 +26,7 @@ npm i spinnies
 npm i image-to-base64 -y
 npm i remove.bg -y
 npm i fluent-ffmpeg -y
-npm i @adiwajshing/baileys@4.0.0 -y
+npm i @adiwajshing/baileys@3.5.0 -y
 npm i performance-now -y
 npm i form-data -y
 npm i yt-search -y
